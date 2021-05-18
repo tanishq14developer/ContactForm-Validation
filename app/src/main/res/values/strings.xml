@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contact_Form</string>
+    <string name="username">Enter Your Name</string>
+    <string name="email">Enter Your Email</string>
+    <string name="contact">Enter Your Contact Number</string>
+    <string name="address">Enter Your Address, Commas are not allowed</string>
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactForm">
+
+    <TextView
+        android:id="@+id/contactform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Contact Form"
+        android:layout_centerHorizontal="true"
+        android:textColor="#F44336"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/contactform">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactform"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="78dp" />
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et1"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/et3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:hint="Contact Number"
+                android:layout_below="@id/et2"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et3"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Gender:"
+                android:textSize="18sp"/>
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_below="@id/gender"
+                    android:layout_marginStart="125dp"/>
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:layout_below="@id/male"
+                    android:layout_marginStart="125dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/female"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Date Of Birth :"
+                android:textSize="18sp" />
+
+            <DatePicker
+                android:id="@+id/datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_below="@id/dob"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true" />
+
+
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Address"
+                android:layout_below="@id/datepicker"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textPostalAddress" />
+
+
+            <Switch
+                android:id="@+id/alerts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recieve emails alerts"
+                android:layout_below="@id/address"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/submit_bttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alerts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="150dp"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
